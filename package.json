@@ -1,0 +1,25 @@
+{
+  "name": "fictional-pancake",
+  "productName": "Fictional-Pancake",
+  "version": "1.0.0",
+  "description": "My first electron app",
+  "main": "main.js",
+  "repository": "git@github.com:oestoer/fictional-pancake.git",
+  "author": "Adam Ostor <adam.ostor@thirdbridge.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --debug",
+    "build:l": "build --linux deb tar.xz",
+    "build:m": "build --macos",
+    "build:w": "build --windows",
+    "build": "yarn run build:l && yarn run build:m && yarn run build:w"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0"
+  },
+  "devDependencies": {
+    "electron": "^1.6.10",
+    "electron-builder": "^18.0.1"
+  }
+}
